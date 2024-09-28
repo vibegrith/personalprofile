@@ -1,6 +1,5 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import Underline from "../assets/images/brush_under.svg";
@@ -30,39 +29,50 @@ import Css from "../assets/images/css.svg";
 ---
 <MainLayout title="Titel">
 
-	<article class="section1 md:mx-14 border-b border-[var(--primary-color-200)] md:custom-bg md:bg-no-repeat md:w-full md:h-full" style="background-image: url('/src/assets/images/vibe.png'); background-position: 110% center; background-size: 600px 600px;">
-  <div class="md:mb-40">
+	<article class="ml-10 mr-10 md:ml-14 md:mr-0 section1">
+  <div class="md:mb-40"> 
     <h2 class="lg:text-9xl relative z-20 font-bold">About</h2>
-    <Image class="mt-[-1rem] absolute w-2/5 h-auto" src={Underline} alt="Brush underline"></Image>
+    <Image class="mt-[-2rem] absolute w-2/5 h-auto" src={Underline} alt="Brush underline"></Image>
   </div>
 
-  <div class="md:grid md:grid-cols-2 md:gap-4 md:relative md:w-3/4 md:mb-20">
-    <div class="flex flex-col justify-center">
-      <p class="lg:text-xl md:mr-10 text-justify">"As a designer, I like to work with strong contrasting colors and shapes, and I am always trying to play around with different graphic. <br><br> <strong>I would describe myself as curious, playful, and eager to learn new skills.</strong></p>
+  <div class="md:grid md:grid-cols-2 md:gap-4 md:relative md:w-3/4 md:mb-20 border-b border-[var(--primary-color-200)]">
+    <div class="flex flex-col justify-start">
+      <p class="lg:text-xl md:mr-10 text-justify">
+        <strong>"Hi, my name is Vibe Mobeck,</strong> and I’m currently studying Multimedia Design at KEA. As a designer, I have a passion for working creatively with bold contrasts and engaging visual elements. 
+        <br><br> My design approach is rooted in a playful and explorative mindset—I’m naturally curious and always eager to expand my knowledge, especially in the fields of digital design and graphics. 
+        <br><br>
+      </p>
     </div>
     <div class="flex flex-col justify-center">
-      <p class="lg:text-xl md:mr-6">I always try to understand what the client wants and would like to portray in their web design. <br><br> With this in mind, I interpret it into the design so the client's values come across clearly. It’s also very important for me to think about consistency, so there is a clear line throughout the website."</p> 
+      <p class="lg:text-xl md:mr-6">
+        In my projects, I prioritize aligning closely with the client’s vision and values, ensuring these are clearly reflected in the final solution. 
+        <br><br> It's equally important to me to establish a cohesive visual narrative throughout the site while creating a design that is both innovative and user-friendly."
+      </p>
+      <h3 class="mt-6 md:mb-6 md:mt-10">Keywords: Creative, Curious and Playful</h3>
+      <Image class="md:hidden" src={Vibe} alt="Profilbillede"></Image>
     </div>
   </div>
 </article>
 
-<section class="md:mr-14 md:ml-14">
+<section class="ml-10 mr-10 md:mr-14 md:ml-14">
 	<h2 class="lg:text-9xl relative z-20 font-bold" >Projects</h2>
-	 <Image class="mt-[-1rem] absolute w-2/5 h-auto" src={Underline} alt="Brush underline"></Image>
+	 <Image class="mt-[-2rem] absolute w-2/5 h-auto" src={Underline} alt="Brush underline"></Image>
   <div class=" grid grid-cols-1 md:grid-cols-2 gap-8">
     
     <!-- Første række: tekst til venstre, billede/video til højre -->
     <div class="order-1 md:order-1 flex flex-col justify-center">
         <div class=" text-justify md:mr-6">
-            <h3 class="text-left md:text-6xl">Kune Festival 2023</h3>
+            <h3 class="text-left md:text-6xl md:mb-6 md:mt-20">Kune Festival 2023</h3>
             <p class="text-left md:mb-0">
-                Redesign af oprindeligt website med Astro. Vi startede projektet med en masse research af andre festivaler, samt festivaler der havde den samme målgruppe.
+                Redesign of Kune Festival's website with a focus on the festival’s core values: Community, Art, and Music. <br> <br>
+				 We chose a warmer color palette to provide users with a greater sense of warmth and inclusivity, while also making their logo more artistic to better reflect their commitment to art. <br> We decided to keep their hero video, as it showcases scenes of celebration, art installations, and the joy shared among people.
             </p>
-			<div class="md:mt-6">
+			<div class="mt-6">
             <h4>Keywords:</h4>
-            <p class="md:mb-6"><strong>Figma prototype, grafisk nyt logo design, projektstyring</strong></p>
-			<div class="md:mt-10">
-			<Link href={"https://glittering-rugelach-5b346d.netlify.app/"}></Link>
+			<div class="flex flex-col md:flex-row md:justify-between md:mb-6">
+			<p class="md:mb-6"><strong>Figma prototype, graphic and visual identity and project management.</strong></p>
+		    <div class="mt-6 md:mt-0">
+			<Link class="" href={"https://glittering-rugelach-5b346d.netlify.app/"}></Link></div>
 			</div>
 			</div>
         </div>
@@ -85,40 +95,43 @@ import Css from "../assets/images/css.svg";
 
     <div class="order-3 md:order-4 flex flex-col justify-center">
         <div class="text-justify md:mr-6 md:ml-6">
-            <h3 class="text-left md:text-6xl">Portfolio Design</h3>
-            <p class="text-left mb-6 md:mb-0">
-                Dette projekt bestod i at designe et portfoliowebsted. Målet var at skabe et moderne, stilfuldt layout.
+            <h3 class="text-left md:text-6xl">Portfolio Site 2022</h3>
+            <p class="text-left mb-6 md:mb-0 md:mt-6">
+                Design and coding of a portfolio site in the 1st semester. <br> <br> I needed to showcase the different themes we had covered, the tools I had used, and how they were applied. At the same time, the site had to represent us as designers. <br> <br> It was important for me to maintain consistency throughout the site and ensure a clear visual narrative, while also experimenting with bold colors and patterns. I drew inspiration from the Memphis style.
             </p>
         </div>
         <div class="md:mr-10 md:ml-6 md:mt-6">
-            <h4>Keywords:</h4>
-            <p><strong>UI/UX design, webudvikling, React</strong></p>
-			<div class="md:mt-10">
-			<Link href={"https://portfoliovibe.netlify.app/"}></Link>
+            <h4 class="md:text-right">Keywords:</h4>
+           <div class="flex flex-col-reverse md:flex-row md:justify-between md:mb-6">
+			<div class="mt-6 md:mt-0 flex content-end">
+			<Link class="" href={"https://glittering-rugelach-5b346d.netlify.app/"}></Link>
+			</div>
+            <p class="md:mb-6"><strong>Adobe XD prototype, visual identity, basic HTML and CSS.
+</strong></p>
 			</div>
         </div>
     </div>
 
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:mt-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:mt-8 border-b border-[var(--primary-color-200)]">
     
     <!-- Første række: tekst til venstre, billede/video til højre -->
     <div class="order-1 md:order-1 flex flex-col justify-center">
         <div class="text-justify md:mr-6">
-            <h3 class="text-left md:text-6xl">Animations spil</h3>
-            <p class="text-left mb-6 md:mb-0">
-                Redesign af oprindeligt website med Astro. Vi startede projektet med en masse research af andre festivaler, samt festivaler der havde den samme målgruppe.
+            <h3 class="mt-6 md:mt-0 text-left md:text-6xl">Animation 2022</h3>
+            <p class="text-left mb-6 md:mb-0 md:mt-6">
+                In this project, we were tasked with designing and coding a digital solution for a game. We designed all elements of the game ourselves, including characters, points, lives, scenes, backgrounds, etc., and created them in Adobe Illustrator. <br> <br> I’m proud of my solution because I feel that I designed fun and consistent characters, and it was also my first time working in Illustrator.
             </p>
         </div>
         <div class="flex flex-col justify-center md:mt-6">
             <h4>Keywords:</h4>
-            <p><strong>Figma prototype, grafisk nyt logo design, projektstyring</strong></p>
+            <p><strong>Illustrator, graphics, visual effects, JS (JavaScript)</strong></p>
         </div>
     </div>	
 
     <div class="order-2 md:order-2 flex flex-col items-center gap-4 video2">
         <div class="relative w-full h-[500px] lg:w-[800px]">
-            <Image class="hidden lg:block absolute w-full h-full object-cover transition-opacity duration-500 ease-in-out hover:opacity-0" src={Kenny} alt="Kune festival"></Image>
+            <Image class="hidden lg:block absolute w-full h-full object-cover transition-opacity duration-500 ease-in-out hover:opacity-0" src={Kenny} alt="Golddigger spil"></Image>
                 <video src="/src/assets/videos/golddigger.mp4" muted loop autoplay class="absolute w-full h-full object-cover opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-500 ease-in-out"></video>
         </div>
     </div>
@@ -126,49 +139,61 @@ import Css from "../assets/images/css.svg";
     <!-- Anden række: billede/video til venstre, tekst til højre -->
     <div class="order-4 md:order-3 flex flex-col items-center gap-4 video3">
         <div class="relative w-full h-[500px] lg:w-[800px]">
-            <Image class="hidden lg:block absolute w-full h-full object-cover transition-opacity duration-500 ease-in-out hover:opacity-0" src={Digital} alt="Portfolio img"></Image>
+            <Image class="hidden lg:block absolute w-full h-full object-cover transition-opacity duration-500 ease-in-out hover:opacity-0" src={Digital} alt="Digital skraldedag forside"></Image>
             <video src="/src/assets/videos/digital.mp4" muted loop autoplay class="absolute w-full h-full object-cover opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-500 ease-in-out"></video>
         </div>
     </div>
 
-    <div class="order-3 md:order-4 flex flex-col justify-center border-b border-[var(--primary-color-200)]">
+    <div class="order-3 md:order-4 flex flex-col justify-center">
         <div class="text-justify md:mr-6 md:ml-6">
             <h3 class="text-left md:text-6xl">Digital skraldedag 2024</h3>
-            <p class="text-left mb-6 md:mb-0">
-                Dette projekt bestod i at designe et portfoliowebsted. Målet var at skabe et moderne, stilfuldt layout.
+            <p class="text-left mb-6 md:mb-0 md:mt-6">
+                In this project, we were tasked with creating a digital design and coding a solution using Astro and Tailwind. <br> <br>
+				Our goal was to develop the Danish equivalent of Digital Cleanup Day, with a focus on sustainability, infographics, and animations from Motion, Animate.css, and Animista. <br> <br>
+				Our solution became a site leaning towards brutalism, which we felt resonated well with the digital theme. Additionally, we chose to use only vector graphics and a dark background to make the site more sustainable. We selected a green accent color to symbolize the environment, nature, and caring for the planet.
             </p>
 			
         </div>
-        <div class="md:mr-10 md:ml-6 md:mt-6">
-            <h4>Keywords:</h4>
-            <p><strong>UI/UX design, webudvikling, React</strong></p>
-			<div class="md:mt-10">
-			<Link href={"https://skraldedag11.netlify.app/"}></Link>
+            <div class="md:mr-10 md:ml-6 md:mt-6">
+            <h4 class="md:text-right">Keywords:</h4>
+			 <div class="flex flex-col-reverse md:flex-row md:justify-between md:mb-6">
+			<div class="mt-6 mb-6 md:my-0 flex content-end">
+			 <Link href={"https://skraldedag11.netlify.app/"}></Link>
+			 </div>
+            <p class=""><strong>UI/UX design, Tailwind, Figma prototype, Illustrator</strong></p>
 			</div>
+			
         </div>
     </div>
+
+	
 
 </div>
   </section>     
 
-<section class="border-b border-[var(--primary-color-200)] md:ml-14 md:mr-14">
+<section class="ml-10 mr-10 border-b border-[var(--primary-color-200)] md:ml-14 md:mr-14">
 	<div class="md:mb-20 md:mr-10">
 	<div class="">
 	 <h2 class="lg:text-9xl relative z-20 font-bold">My passion</h2>
-	 <Image class="mt-[-1rem] absolute w-2/5 h-auto" src={Underline} alt="Brush underline"></Image>
+	 <Image class="mt-[-2rem] absolute w-2/5 h-auto" src={Underline} alt="Brush underline"></Image>
 	 </div>
  
 <div class="grid grid-cols-1 md:grid-cols-3 md:gap-6 md:mt-40 passion">
-    <div class="text-justify border-r border-[var(--primary-color-200)] ">
-	<h3 class="mb-10 md:text-6xl">Figma</h3>
-	<p class="lg:text-left mb-10 md:mr-6">Som praktikant hos jer, vil jeg kunne løse arbejdsopgaver i Figma. Jeg har gennem mit studie brugt både Adobe XD og nu Figma til at udvikle prototyper, wireframes, moodboards og designsystemer. <br> <br>
-    Vi har lært at arbejde med komponenter og med at få det responsivt.  Jeg ønsker at dygtiggøre mig i Figma og få flere komptencer indenfor dette værktøj.</p>
+    <div class="text-justify md:border-r md:border-[var(--primary-color-200)] ">
+	<h3 class="mb-6 md:mb-10 md:text-6xl">Figma</h3>
+	<p class="lg:text-left mb-10 md:mr-6">As an intern with your company, I would be able to take on tasks in Figma. <br> Throughout my studies, I have worked extensively with both Adobe XD and now Figma to develop prototypes, wireframes, mood boards, and design systems. <br> <br>
+
+    We have learned how to work with components and ensure that designs are responsive. I am eager to further develop my skills in Figma and enhance my competencies with this <br> <br>
+	Additionally, my experience with Figma includes organizing and maintaining design files for collaborative work, ensuring consistency across components, and applying best practices for UI/UX design. <br> <br>
+
+	<strong>By working with your team, I hope to deepen my understanding of Figma’s advanced features, such as team libraries, auto-layouts, and interactive components, to contribute more efficiently to real-world projects. </p></strong>
     </div>
 
-    <div class="text-justify border-r border-[var(--primary-color-200)] passion1 ">
-    <h3 class="text-left md:mb-10 md:text-6xl">Visual identity</h3>
-     <p class="lg:text-left mb-10 md:mr-6">Jeg har arbejdet med visuel identitet på flere af de digitale løsninger jeg har udarbejdet. Jeg synes det er en lærerig proces af arbejde med den visuelle identitet og ønsker at få flere kompetencer indenfor dette område. <br> <br> 
-    På uddannelsen har vi igennem flere af vore projekter skulle re-designe en løsning og heraf også arbejde med den visuelle identitet. Det har betydet at vi har researchet og testet på vores endelige løsninger. Til højre er et udpluk af nogle logoer jeg har designet til forskellige løsninger. </p>
+    <div class="text-justify md:border-r md:border-[var(--primary-color-200)] passion1 ">
+    <h3 class="mb-6 text-left md:mb-10 md:text-6xl">Visual identity</h3>
+     <p class="lg:text-left mb-10 md:mr-6">I have worked on visual identities for several of the digital solutions I’ve developed. I find the process of creating a cohesive visual identity to be both insightful and rewarding, and I’m eager to further develop my skills in this area. <br> <br>
+
+During my studies, many of our projects have involved redesigning existing solutions, which has also required us to work on the visual identity. This has included conducting research and testing to refine our final designs. Below, you can see a selection of logos I’ve created for different projects. </p>
 	<div class="mt-10 flex flex-row justify-evenly">
 		<Image class="w-1/4 h-auto" src={Logo1} alt="Logo smiley"></Image>
 		<Image class="w-1/4 h-auto" src={Logo2} alt="Logo flower"></Image>
@@ -177,12 +202,13 @@ import Css from "../assets/images/css.svg";
 	</div>
 
 	<div class="text-justify passion2">
-    <h3 class="lg:text-left mb-10 md:text-6xl">Grafisk designs</h3>
-    <p class="lg:text-left">Igennem uddannelsen har vi arebjdet med grafiske elementer, typografi og infografik. Jeg har arbejdet i illustrator, for at udvikle og designe spilelementer, grafisk typografi til website løsninger og tegninger til info bokse. <br> <br> 
-    Jeg vil gerne udvikle mine kompetencer endnu mere inden for dette område og arbejde med opgaver der involvere grafik.</p>
+    <h3 class="mt-6 mb-6 md:mt-0 lg:text-left md:mb-10 md:text-6xl">Graphic Design</h3>
+    <p class="lg:text-left">Throughout my studies, we have worked with graphic elements, typography, and infographics. I have used Illustrator to develop and design game elements, graphic typography for website solutions, and illustrations for info boxes. <br> <br>
+
+I am eager to further develop my skills in this area and work on tasks that involve graphic design.</p>
 	<div class="flex flex-row justify-evenly mb-10 mt-10">
-	<Image class="w-2/5 h-auto" src={Grafisk} alt="Grafisk tekst"></Image>
-	<Image class="w-2/5 h-auto" src={Grafisk2} alt="Grafisk tekst"></Image>
+	<Image class="w-2/5 h-auto" src={Grafisk} alt="Grafisk tekst Kune"></Image>
+	<Image class="w-2/5 h-auto" src={Grafisk2} alt="Grafisk tekst musik"></Image>
     </div>	  
 	</div>
 
@@ -192,14 +218,14 @@ import Css from "../assets/images/css.svg";
 <section class="border-b border-[var(--primary-color-200)] md:ml-14 md:mr-14">
 	
 	<div class="md:mb-20 md:mr-10">
-	<div class="">
+	<div class="ml-6 md:ml-0">
 	 <h2 class="lg:text-9xl relative z-20 font-bold">Skills</h2>
-	 <Image class="mt-[-1rem] absolute w-2/5 h-auto" src={Underline} alt="Brush underline"></Image>
+	 <Image class="mt-[-2rem] absolute w-2/5 h-auto" src={Underline} alt="Brush underline"></Image>
 	 </div>
+<div class="ml-10 mt-10 mb-10 md:ml-0 md:my-0 border-l border-[var(--primary-color-200)] md:border-0">
+	<div class="ml-6 grid grid-cols-1 md:ml-0 md:grid-cols-3 md:gap-10 md:mt-32">
 
-	<div class="grid grid-cols-1 md:grid-cols-3 md:gap-10 md:mt-32">
-
-		<div class="border-r border-[var(--primary-color-200)] skill">
+		<div class=" md:border-r md:border-[var(--primary-color-200)] skill">
 			<h3 class="md:text-6xl md:mb-10 ">Work</h3>
 			<div class="grid grid-cols-1 md:grid-cols-2">
                 <div class="flex flex-col justify-center">
@@ -242,14 +268,14 @@ import Css from "../assets/images/css.svg";
 			
 		</div>
 
-		<div class="border-r border-[var(--primary-color-200)] skill1">
-			<h3 class="md:text-6xl md:mb-10">Education</h3>
+		<div class="md:border-r md:border-[var(--primary-color-200)] skill1">
+			<h3 class="mt-6 md:mt-0 md:text-left md:text-6xl md:mb-10">Education</h3>
 			<div class="grid grid-cols-1 md:grid-cols-2">
 
 				<div class="flex flex-col justify-center">
-					<p class="text-[var( --primary-color-500)]">August 2022-June 2025</p>
+					<p class="mt-4 md:mt-0 text-[var( --primary-color-500)]">August 2022-June 2025</p>
 				</div>
-				<div class="md:border-l md:border-[var(--primary-color-200)] md:mb-6 md:mr-6">
+				<div class="md:text-left md:border-l md:border-[var(--primary-color-200)] md:mb-6 md:mr-6">
 					<div class="md:ml-6">
 					<h4>Multimediedesign</h4>
 					<p>KEA - Københavns Erhvervsakademi</p>
@@ -259,7 +285,7 @@ import Css from "../assets/images/css.svg";
 
 		</div>
 
-			<div class="grid grid-cols-1 md:grid-cols-2">
+			<div class="grid grid-cols-1 md:text-left md:grid-cols-2">
 
 				<div class="flex flex-col justify-center">
 					<p class="text-[var( --primary-color-500)]">September 2009-June 2013</p>
@@ -289,19 +315,19 @@ import Css from "../assets/images/css.svg";
 			
 		</div>
 
-	<div class="skill2">
-  <h3 class="md:mb-10 md:text-6xl">Tools</h3>
-  <div class="grid grid-cols-2 md:grid-cols-2 justify-center">
+<div class="skill2">
+  <h3 class="md:text-left mb-6 mt-6 md:mt-0 md:mb-10 md:text-6xl">Tools</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 justify-center">
     
     <!-- Første kolonne med tre billeder -->
     <div class="flex flex-col items-start gap-4">
-	 <div class="flex flx-row gap-3">
+	 <div class="w-1/5 h-1/5 md:w-full md:h-full flex flex-row gap-3">
       <Image src={Ai} alt="Illustrator logo"></Image>
 	  <Image src={Xd} alt="Adobe XD logo"></Image>
 	  <Image src={Ps} alt="photoshop logo"></Image>
 	   <Image src={Figma} alt="Figma logo"></Image>
 	  </div>
-	  <div class="flex flex-row gap-3">
+	  <div class="w-1/5 h-1/5 md:w-full md:h-full flex flex-row gap-3">
       <Image src={Css} alt="Css logo"></Image>
 	  <Image src={Html} alt="Html logo"></Image>
 	  <Image src={Github} alt="Github logo"></Image>
@@ -313,11 +339,29 @@ import Css from "../assets/images/css.svg";
 
   </div>
 </div>
-
+</div>
 </section>
 
 
 </MainLayout>
+
+<style>
+.section1 {
+    background-image: url('/src/assets/images/vibe.png'); /* Baggrund for desktop */
+    background-size: 600px 600px; 
+    background-position: 115% center; 
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) { /* Skjuler baggrunden på mobile enheder */
+    .section1 {
+        background-image: none; /* Skjuler baggrunden */
+    }
+}
+
+</style>
+
+
 
 <script>
 	import { inView } from "motion";
