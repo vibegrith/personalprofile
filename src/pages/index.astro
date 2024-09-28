@@ -22,7 +22,9 @@ import Tailwind from "../assets/images/tailwind.svg";
 import Html from "../assets/images/html.svg";
 import Css from "../assets/images/css.svg";
 import KuneVideo from "../assets/videos/kune.mp4";
-
+import PortfolioVideo from "../assets/videos/portfolio.mp4";
+import GoldVideo from "../assets/videos/golddigger.mp4";
+import DigitalVideo from "../assets/videos/digital.mp4";
 const {src} = await getImage({src: Vibe})
 
 
@@ -92,7 +94,7 @@ const {src} = await getImage({src: Vibe})
     <div class="order-4 md:order-3 flex flex-col items-center gap-4 video1">
         <div class="relative w-full h-[500px] lg:w-[800px]">
             <Image class="hidden lg:block absolute w-full h-full object-cover transition-opacity duration-500 ease-in-out hover:opacity-0" src={Portfolio} alt="Portfolio img"></Image>
-            <video src="./src/assets/videos/portfolio.mp4" muted loop autoplay class="absolute w-full h-full object-cover opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-500 ease-in-out"></video>
+            <video src={PortfolioVideo} muted loop autoplay class="absolute w-full h-full object-cover opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-500 ease-in-out"></video>
         </div>
     </div>
 
@@ -135,7 +137,7 @@ const {src} = await getImage({src: Vibe})
     <div class="order-2 md:order-2 flex flex-col items-center gap-4 video2">
         <div class="relative w-full h-[500px] lg:w-[800px]">
             <Image class="hidden lg:block absolute w-full h-full object-cover transition-opacity duration-500 ease-in-out hover:opacity-0" src={Kenny} alt="Golddigger spil"></Image>
-                <video src="./src/assets/videos/golddigger.mp4" muted loop autoplay class="absolute w-full h-full object-cover opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-500 ease-in-out"></video>
+                <video src={GoldVideo} muted loop autoplay class="absolute w-full h-full object-cover opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-500 ease-in-out"></video>
         </div>
     </div>
 
@@ -143,7 +145,7 @@ const {src} = await getImage({src: Vibe})
     <div class="order-4 md:order-3 flex flex-col items-center gap-4 video3">
         <div class="relative w-full h-[500px] lg:w-[800px]">
             <Image class="hidden lg:block absolute w-full h-full object-cover transition-opacity duration-500 ease-in-out hover:opacity-0" src={Digital} alt="Digital skraldedag forside"></Image>
-            <video src="./src/assets/videos/digital.mp4" muted loop autoplay class="absolute w-full h-full object-cover opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-500 ease-in-out"></video>
+            <video src={DigitalVideo} muted loop autoplay class="absolute w-full h-full object-cover opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-500 ease-in-out"></video>
         </div>
     </div>
 
