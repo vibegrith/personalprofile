@@ -21,6 +21,7 @@ import Github from "../assets/images/github.svg";
 import Tailwind from "../assets/images/tailwind.svg";
 import Html from "../assets/images/html.svg";
 import Css from "../assets/images/css.svg";
+import KuneVideo from "../assets/videos/kune.mp4"
 
 const {src} = await getImage({src: Vibe})
 
@@ -83,7 +84,7 @@ const {src} = await getImage({src: Vibe})
     <div class="order-2 md:order-2 flex flex-col items-center gap-4 video ">
         <div class="relative w-full h-[500px] lg:w-[800px]">
             <Image class="hidden lg:block absolute w-full h-full object-cover transition-opacity duration-500 ease-in-out hover:opacity-0" src={Kune} alt="Kune festival"></Image>
-                <video src="./src/assets/videos/kune.mp4" muted loop autoplay class="absolute w-full h-full object-cover opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-500 ease-in-out"></video>
+                <video src={KuneVideo} muted loop autoplay class="absolute w-full h-full object-cover opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-500 ease-in-out"></video>
         </div>
     </div>
 
