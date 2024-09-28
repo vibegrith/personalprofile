@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import Underline from "../assets/images/brush_under.svg";
 import Logo1 from "../assets/images/blue_smile.svg";
 import Logo2 from "../assets/images/blue_smiley.svg";
@@ -22,6 +22,8 @@ import Tailwind from "../assets/images/tailwind.svg";
 import Html from "../assets/images/html.svg";
 import Css from "../assets/images/css.svg";
 
+const {src} = await getImage({src: Vibe})
+
 
 
 
@@ -29,7 +31,7 @@ import Css from "../assets/images/css.svg";
 ---
 <MainLayout title="Titel">
 
-	<article class="ml-10 mr-10 md:ml-14 md:mr-0 section1">
+	<article class="ml-10 mr-10 md:ml-14 md:mr-0 section1" style=`background-image: url(${src})`>
   <div class="md:mb-40"> 
     <h2 class="lg:text-9xl relative z-20 font-bold">About</h2>
     <Image class="mt-[-2rem] absolute w-2/5 h-auto" src={Underline} alt="Brush underline"></Image>
@@ -347,7 +349,6 @@ I am eager to further develop my skills in this area and work on tasks that invo
 
 <style>
 .section1 {
-    background-image: url('./src/assets/images/vibe.webp'); /* Baggrund for desktop */
     background-size: 600px 600px; 
     background-position: 115% center; 
     background-repeat: no-repeat;
