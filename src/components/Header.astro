@@ -1,10 +1,12 @@
 ---
-import { Image } from 'astro:assets';
+import { getImage } from 'astro:assets';
 import Vibe from "../assets/images/hero2.png";
 import Logo from "../assets/images/logo.svg";
+import heroBackgroundImage from "../assets/images/hero.webp"
+const {src} = await getImage({src: heroBackgroundImage})
+
 ---
-    
-<section class="relative h-96 lg:h-screen bg-cover bg-center border-b border-[var(--primary-color-200)]" style="background-image: url('./src/assets/images/hero.webp');">
+<section class="relative h-96 lg:h-screen bg-cover bg-center border-b border-[var(--primary-color-200)]" style=`background-image: url(${src})` >
   <div class="grid grid-cols-2 gap-10 relative z-10 items-center justify-between h-full text-center lg:pl-12">
     
     <!-- Første kolonne: VIBE GRITH med tekst under -->
@@ -23,6 +25,8 @@ import Logo from "../assets/images/logo.svg";
 
   </div>
 </section>
+
+
 
 <script>
 
