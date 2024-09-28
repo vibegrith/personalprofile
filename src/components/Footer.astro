@@ -1,6 +1,27 @@
 ---
+import { Image } from 'astro:assets';
+import Linkedin from "../assets/images/linkedin.svg";
+import Logo from "../assets/images/logo.svg";
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
+<div class="grid grid-col-1 md:grid-cols-3">
+    
+    <div class="flex flex-row justify-center">
+        <div class="flex flex-col justify-center">
+        <p> © 2024 Vibe Grith Mobeck</p>
+        </div>
+    </div>
+    <div class="flex flex-col justify-center">
+        <h3 class="text-center">Lets get in contact</h3>
+        <p></p>
+        <div class="flex flex-row justify-center">
+<a href="https://www.linkedin.com/in/vibe-mobeck-29864932a/"><Image src={Linkedin} alt="Linkedin logo"></Image></a>
+</div>
+    </div>
+
+    <div class="flex flex-row justify-center">
+        <a href="#"><Image src={Logo} alt="Vibe logo"></Image></a>
+
+    </div>
+
 </div>
   

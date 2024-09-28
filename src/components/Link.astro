@@ -2,4 +2,6 @@
 // Henter parametrene fra Astro.props
 const { href="#", target="_self"} = Astro.props; 
 ---
-<a href={href} class="underline" target={target}><slot /></a>
+
+<a href={href} class="font-bold border border-[var(--primary-color-200)] md:pulsate-bck md:py-4 md:px-10 hover:bg-[var(--primary-color-200)] hover:text-[var(--primary-color-100)]" target={target}><slot />Gå til site</a>
+

@@ -1,5 +1,56 @@
 ---
+import { Image } from 'astro:assets';
+import Vibe from "../assets/images/hero2.png";
+import Logo from "../assets/images/logo.svg";
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+    
+<section class="relative h-96 lg:h-screen bg-cover bg-center border-b border-[var(--primary-color-200)]" style="background-image: url('/src/assets/images/hero.png');">
+  <div class="grid grid-cols-2 gap-10 relative z-10 items-center justify-between h-full text-center lg:pl-12">
+    
+    <!-- Første kolonne: VIBE GRITH med tekst under -->
+    <div class="flex flex-col items-end justify-end">
+      <h1 class="text-3xl md:text-9xl text-[var(--primary-color-200)] font-bold head">VIBE GRITH</h1>
+      <div class="justify-end">
+      <p class="text-lg md:text-6xl text-[var(--primary-color-200)] head2">Digital designer</p> <!-- Tekst tilføjet her -->
+      </div>
+    </div>
+
+    <!-- Anden kolonne: MOBECK med tekst under -->
+    <div class="flex flex-col items-start justify-center">
+      <h1 class="text-3xl md:text-9xl font-bold text-[var(--primary-color-100)] head1">MOBECK</h1>
+      <p class="text-lg md:text-6xl text-[var(--primary-color-100)] head3">Graphic design</p> <!-- Tekst tilføjet her -->
+    </div>
+
+  </div>
+</section>
+
+<script>
+
+  import { inView } from "motion";
+
+  	const inviewelement12 = document.querySelector(".head");
+	inView(
+		inviewelement12 , () => {
+			inviewelement12.classList.add("animate__animated","animate__fadeInDown", "animate__delay-1s")
+		})
+
+		const inviewelement13 = document.querySelector(".head1");
+	inView(
+		inviewelement13 , () => {
+			inviewelement13.classList.add("animate__animated","animate__fadeInDown", "animate__delay-1s")
+		})
+
+			const inviewelement14 = document.querySelector(".head2");
+	inView(
+		inviewelement14 , () => {
+			inviewelement14.classList.add("animate__animated","animate__fadeInUp", "animate__delay-2s")
+		})
+
+		const inviewelement15 = document.querySelector(".head3");
+	inView(
+		inviewelement15 , () => {
+			inviewelement15.classList.add("animate__animated","animate__fadeInUp", "animate__delay-2s")
+		})
+		
+</script>
+

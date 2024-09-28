@@ -3,13 +3,400 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import Underline from "../assets/images/brush_under.svg";
+import Logo1 from "../assets/images/blue_smile.svg";
+import Logo2 from "../assets/images/blue_smiley.svg";
+import Logo from "../assets/images/thrift.svg";
+import Grafisk from "../assets/images/Logo_leg.svg";
+import Grafisk2 from "../assets/images/musik.svg";
+import Kune from "../assets/images/kune_blue.png";
+import Portfolio from "../assets/images/portfolio_blue.png";
+import Digital from "../assets/images/digital_blue.png";
+import Vibe from "../assets/images/vibe.png";
+import Kenny from "../assets/images/kenny.png";
+import Figma from "../assets/images/figma.svg";
+import Xd from "../assets/images/xd.svg";
+import Ps from "../assets/images/ps.svg";
+import Ai from "../assets/images/ai.svg";
+import Github from "../assets/images/github.svg";
+import Tailwind from "../assets/images/tailwind.svg";
+import Html from "../assets/images/html.svg";
+import Css from "../assets/images/css.svg";
+
+
+
+
+
 ---
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+
+	<article class="section1 md:mx-14 border-b border-[var(--primary-color-200)] md:custom-bg md:bg-no-repeat md:w-full md:h-full" style="background-image: url('/src/assets/images/vibe.png'); background-position: 110% center; background-size: 600px 600px;">
+  <div class="md:mb-40">
+    <h2 class="lg:text-9xl relative z-20 font-bold">About</h2>
+    <Image class="mt-[-1rem] absolute w-2/5 h-auto" src={Underline} alt="Brush underline"></Image>
+  </div>
+
+  <div class="md:grid md:grid-cols-2 md:gap-4 md:relative md:w-3/4 md:mb-20">
+    <div class="flex flex-col justify-center">
+      <p class="lg:text-xl md:mr-10 text-justify">"As a designer, I like to work with strong contrasting colors and shapes, and I am always trying to play around with different graphic. <br><br> <strong>I would describe myself as curious, playful, and eager to learn new skills.</strong></p>
+    </div>
+    <div class="flex flex-col justify-center">
+      <p class="lg:text-xl md:mr-6">I always try to understand what the client wants and would like to portray in their web design. <br><br> With this in mind, I interpret it into the design so the client's values come across clearly. It’s also very important for me to think about consistency, so there is a clear line throughout the website."</p> 
+    </div>
+  </div>
+</article>
+
+<section class="md:mr-14 md:ml-14">
+	<h2 class="lg:text-9xl relative z-20 font-bold" >Projects</h2>
+	 <Image class="mt-[-1rem] absolute w-2/5 h-auto" src={Underline} alt="Brush underline"></Image>
+  <div class=" grid grid-cols-1 md:grid-cols-2 gap-8">
+    
+    <!-- Første række: tekst til venstre, billede/video til højre -->
+    <div class="order-1 md:order-1 flex flex-col justify-center">
+        <div class=" text-justify md:mr-6">
+            <h3 class="text-left md:text-6xl">Kune Festival 2023</h3>
+            <p class="text-left md:mb-0">
+                Redesign af oprindeligt website med Astro. Vi startede projektet med en masse research af andre festivaler, samt festivaler der havde den samme målgruppe.
+            </p>
+			<div class="md:mt-6">
+            <h4>Keywords:</h4>
+            <p class="md:mb-6"><strong>Figma prototype, grafisk nyt logo design, projektstyring</strong></p>
+			<div class="md:mt-10">
+			<Link href={"https://glittering-rugelach-5b346d.netlify.app/"}></Link>
+			</div>
+			</div>
+        </div>
+    </div>	
+
+    <div class="order-2 md:order-2 flex flex-col items-center gap-4 video ">
+        <div class="relative w-full h-[500px] lg:w-[800px]">
+            <Image class="hidden lg:block absolute w-full h-full object-cover transition-opacity duration-500 ease-in-out hover:opacity-0" src={Kune} alt="Kune festival"></Image>
+                <video src="/src/assets/videos/kune.mp4" muted loop autoplay class="absolute w-full h-full object-cover opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-500 ease-in-out"></video>
+        </div>
+    </div>
+
+    <!-- Anden række: billede/video til venstre, tekst til højre -->
+    <div class="order-4 md:order-3 flex flex-col items-center gap-4 video1">
+        <div class="relative w-full h-[500px] lg:w-[800px]">
+            <Image class="hidden lg:block absolute w-full h-full object-cover transition-opacity duration-500 ease-in-out hover:opacity-0" src={Portfolio} alt="Portfolio img"></Image>
+            <video src="/src/assets/videos/portfolio.mp4" muted loop autoplay class="absolute w-full h-full object-cover opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-500 ease-in-out"></video>
+        </div>
+    </div>
+
+    <div class="order-3 md:order-4 flex flex-col justify-center">
+        <div class="text-justify md:mr-6 md:ml-6">
+            <h3 class="text-left md:text-6xl">Portfolio Design</h3>
+            <p class="text-left mb-6 md:mb-0">
+                Dette projekt bestod i at designe et portfoliowebsted. Målet var at skabe et moderne, stilfuldt layout.
+            </p>
+        </div>
+        <div class="md:mr-10 md:ml-6 md:mt-6">
+            <h4>Keywords:</h4>
+            <p><strong>UI/UX design, webudvikling, React</strong></p>
+			<div class="md:mt-10">
+			<Link href={"https://portfoliovibe.netlify.app/"}></Link>
+			</div>
+        </div>
+    </div>
+
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:mt-8">
+    
+    <!-- Første række: tekst til venstre, billede/video til højre -->
+    <div class="order-1 md:order-1 flex flex-col justify-center">
+        <div class="text-justify md:mr-6">
+            <h3 class="text-left md:text-6xl">Animations spil</h3>
+            <p class="text-left mb-6 md:mb-0">
+                Redesign af oprindeligt website med Astro. Vi startede projektet med en masse research af andre festivaler, samt festivaler der havde den samme målgruppe.
+            </p>
+        </div>
+        <div class="flex flex-col justify-center md:mt-6">
+            <h4>Keywords:</h4>
+            <p><strong>Figma prototype, grafisk nyt logo design, projektstyring</strong></p>
+        </div>
+    </div>	
+
+    <div class="order-2 md:order-2 flex flex-col items-center gap-4 video2">
+        <div class="relative w-full h-[500px] lg:w-[800px]">
+            <Image class="hidden lg:block absolute w-full h-full object-cover transition-opacity duration-500 ease-in-out hover:opacity-0" src={Kenny} alt="Kune festival"></Image>
+                <video src="/src/assets/videos/golddigger.mp4" muted loop autoplay class="absolute w-full h-full object-cover opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-500 ease-in-out"></video>
+        </div>
+    </div>
+
+    <!-- Anden række: billede/video til venstre, tekst til højre -->
+    <div class="order-4 md:order-3 flex flex-col items-center gap-4 video3">
+        <div class="relative w-full h-[500px] lg:w-[800px]">
+            <Image class="hidden lg:block absolute w-full h-full object-cover transition-opacity duration-500 ease-in-out hover:opacity-0" src={Digital} alt="Portfolio img"></Image>
+            <video src="/src/assets/videos/digital.mp4" muted loop autoplay class="absolute w-full h-full object-cover opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-500 ease-in-out"></video>
+        </div>
+    </div>
+
+    <div class="order-3 md:order-4 flex flex-col justify-center border-b border-[var(--primary-color-200)]">
+        <div class="text-justify md:mr-6 md:ml-6">
+            <h3 class="text-left md:text-6xl">Digital skraldedag 2024</h3>
+            <p class="text-left mb-6 md:mb-0">
+                Dette projekt bestod i at designe et portfoliowebsted. Målet var at skabe et moderne, stilfuldt layout.
+            </p>
+			
+        </div>
+        <div class="md:mr-10 md:ml-6 md:mt-6">
+            <h4>Keywords:</h4>
+            <p><strong>UI/UX design, webudvikling, React</strong></p>
+			<div class="md:mt-10">
+			<Link href={"https://skraldedag11.netlify.app/"}></Link>
+			</div>
+        </div>
+    </div>
+
+</div>
+  </section>     
+
+<section class="border-b border-[var(--primary-color-200)] md:ml-14 md:mr-14">
+	<div class="md:mb-20 md:mr-10">
+	<div class="">
+	 <h2 class="lg:text-9xl relative z-20 font-bold">My passion</h2>
+	 <Image class="mt-[-1rem] absolute w-2/5 h-auto" src={Underline} alt="Brush underline"></Image>
+	 </div>
+ 
+<div class="grid grid-cols-1 md:grid-cols-3 md:gap-6 md:mt-40 passion">
+    <div class="text-justify border-r border-[var(--primary-color-200)] ">
+	<h3 class="mb-10 md:text-6xl">Figma</h3>
+	<p class="lg:text-left mb-10 md:mr-6">Som praktikant hos jer, vil jeg kunne løse arbejdsopgaver i Figma. Jeg har gennem mit studie brugt både Adobe XD og nu Figma til at udvikle prototyper, wireframes, moodboards og designsystemer. <br> <br>
+    Vi har lært at arbejde med komponenter og med at få det responsivt.  Jeg ønsker at dygtiggøre mig i Figma og få flere komptencer indenfor dette værktøj.</p>
+    </div>
+
+    <div class="text-justify border-r border-[var(--primary-color-200)] passion1 ">
+    <h3 class="text-left md:mb-10 md:text-6xl">Visual identity</h3>
+     <p class="lg:text-left mb-10 md:mr-6">Jeg har arbejdet med visuel identitet på flere af de digitale løsninger jeg har udarbejdet. Jeg synes det er en lærerig proces af arbejde med den visuelle identitet og ønsker at få flere kompetencer indenfor dette område. <br> <br> 
+    På uddannelsen har vi igennem flere af vore projekter skulle re-designe en løsning og heraf også arbejde med den visuelle identitet. Det har betydet at vi har researchet og testet på vores endelige løsninger. Til højre er et udpluk af nogle logoer jeg har designet til forskellige løsninger. </p>
+	<div class="mt-10 flex flex-row justify-evenly">
+		<Image class="w-1/4 h-auto" src={Logo1} alt="Logo smiley"></Image>
+		<Image class="w-1/4 h-auto" src={Logo2} alt="Logo flower"></Image>
+		<Image class="w-1/4 h-auto" src={Logo} alt="Logo Vibe"></Image>
+	</div>
+	</div>
+
+	<div class="text-justify passion2">
+    <h3 class="lg:text-left mb-10 md:text-6xl">Grafisk designs</h3>
+    <p class="lg:text-left">Igennem uddannelsen har vi arebjdet med grafiske elementer, typografi og infografik. Jeg har arbejdet i illustrator, for at udvikle og designe spilelementer, grafisk typografi til website løsninger og tegninger til info bokse. <br> <br> 
+    Jeg vil gerne udvikle mine kompetencer endnu mere inden for dette område og arbejde med opgaver der involvere grafik.</p>
+	<div class="flex flex-row justify-evenly mb-10 mt-10">
+	<Image class="w-2/5 h-auto" src={Grafisk} alt="Grafisk tekst"></Image>
+	<Image class="w-2/5 h-auto" src={Grafisk2} alt="Grafisk tekst"></Image>
+    </div>	  
+	</div>
+
+</div>
+</section>
+
+<section class="border-b border-[var(--primary-color-200)] md:ml-14 md:mr-14">
+	
+	<div class="md:mb-20 md:mr-10">
+	<div class="">
+	 <h2 class="lg:text-9xl relative z-20 font-bold">Skills</h2>
+	 <Image class="mt-[-1rem] absolute w-2/5 h-auto" src={Underline} alt="Brush underline"></Image>
+	 </div>
+
+	<div class="grid grid-cols-1 md:grid-cols-3 md:gap-10 md:mt-32">
+
+		<div class="border-r border-[var(--primary-color-200)] skill">
+			<h3 class="md:text-6xl md:mb-10 ">Work</h3>
+			<div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="flex flex-col justify-center">
+					<p class="text-[var( --primary-color-500)]">Januar 2021-Oktober 2021</p>
+				</div>
+                <div class="md:border-l md:border-[var(--primary-color-200)] md:mb-6 md:mr-6">
+					<div class="md:ml-6">
+					<h4>Inklusions Pædagog</h4>
+					<p>Vesterbro Ungdomsgaard</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="flex flex-col justify-center">
+					<p class="text-[var( --primary-color-500)]">April 2017-Marts 2020</p>
+				</div>
+                <div class="md:border-l md:border-[var(--primary-color-200)] md:mb-6">
+					<div class="md:ml-6">
+					<h4>Pædagog</h4>
+					<p>Emdrup Søgaard - NBS4</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="flex flex-col justify-center">
+					<p class="text-[var( --primary-color-500)]">November 2013-December 2016</p>
+				</div>
+                <div class="md:border-l md:border-[var(--primary-color-200)] md:mb-6">
+					<div class="md:ml-6 md:mb-10">
+					<h4>Pædagog</h4>
+					<p>Stafetten</p>
+					</div>
+				</div>
+
+			</div>
+			
+		</div>
+
+		<div class="border-r border-[var(--primary-color-200)] skill1">
+			<h3 class="md:text-6xl md:mb-10">Education</h3>
+			<div class="grid grid-cols-1 md:grid-cols-2">
+
+				<div class="flex flex-col justify-center">
+					<p class="text-[var( --primary-color-500)]">August 2022-June 2025</p>
+				</div>
+				<div class="md:border-l md:border-[var(--primary-color-200)] md:mb-6 md:mr-6">
+					<div class="md:ml-6">
+					<h4>Multimediedesign</h4>
+					<p>KEA - Københavns Erhvervsakademi</p>
+					</div>
+				</div>
+           
+
+		</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2">
+
+				<div class="flex flex-col justify-center">
+					<p class="text-[var( --primary-color-500)]">September 2009-June 2013</p>
+				</div>
+				<div class="md:border-l md:border-[var(--primary-color-200)] md:mb-6  md:mr-6">
+					<div class="md:ml-6">
+					<h4>Pædagog</h4>
+					<p>Frøbel seminariet</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2">
+
+				<div class="flex flex-col justify-center">
+					<p class="text-[var( --primary-color-500)]">August 2005-June 2008</p>
+				</div>
+				<div class="md:border-l md:border-[var(--primary-color-200)]  md:mr-6 ">
+					<div class="md:ml-6">
+					<h4>HHX</h4>
+					<p>Handelsskolen Sjælland Syd</p>
+					</div>
+				</div>
+
+			</div>
+			
+		</div>
+
+	<div class="skill2">
+  <h3 class="md:mb-10 md:text-6xl">Tools</h3>
+  <div class="grid grid-cols-2 md:grid-cols-2 justify-center">
+    
+    <!-- Første kolonne med tre billeder -->
+    <div class="flex flex-col items-start gap-4">
+	 <div class="flex flx-row gap-3">
+      <Image src={Ai} alt="Illustrator logo"></Image>
+	  <Image src={Xd} alt="Adobe XD logo"></Image>
+	  <Image src={Ps} alt="photoshop logo"></Image>
+	   <Image src={Figma} alt="Figma logo"></Image>
+	  </div>
+	  <div class="flex flex-row gap-3">
+      <Image src={Css} alt="Css logo"></Image>
+	  <Image src={Html} alt="Html logo"></Image>
+	  <Image src={Github} alt="Github logo"></Image>
+	  <Image src={Tailwind} alt="Tailwind logo"></Image>
+	  </div>
+	  
+    </div>
+    
+
+  </div>
+</div>
+
+</section>
+
+
 </MainLayout>
+
+<script>
+	import { inView } from "motion";
+
+	const inviewelement = document.querySelector(".section1");
+	inView(
+		inviewelement , () => {
+			inviewelement.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+
+		const inviewelement1 = document.querySelector(".section2");
+	inView(
+		inviewelement1 , () => {
+			inviewelement1.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+
+		const inviewelement2 = document.querySelector(".video");
+	inView(
+		inviewelement2 , () => {
+			inviewelement2.classList.add("animate__animated","animate__fadeInRight", "animate__delay-1s")
+		})
+
+		const inviewelement3 = document.querySelector(".video1");
+	inView(
+		inviewelement3 , () => {
+			inviewelement3.classList.add("animate__animated","animate__fadeInLeft", "animate__delay-1s")
+		})
+
+		const inviewelement4 = document.querySelector(".video2");
+	inView(
+		inviewelement4 , () => {
+			inviewelement4.classList.add("animate__animated","animate__fadeInRight", "animate__delay-1s")
+		})
+
+			const inviewelement5 = document.querySelector(".video3");
+	inView(
+		inviewelement5 , () => {
+			inviewelement5.classList.add("animate__animated","animate__fadeInLeft", "animate__delay-1s")
+		})
+
+			const inviewelement6 = document.querySelector(".passion");
+	inView(
+		inviewelement6 , () => {
+			inviewelement6.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+
+		const inviewelement7 = document.querySelector(".passion1");
+	inView(
+		inviewelement7 , () => {
+			inviewelement7.classList.add("animate__animated","animate__fadeInUp", "animate__delay-2s")
+		})
+
+			const inviewelement8 = document.querySelector(".passion2");
+	inView(
+		inviewelement8 , () => {
+			inviewelement8.classList.add("animate__animated","animate__fadeInUp", "animate__delay-3s")
+		})
+
+		
+			const inviewelement9 = document.querySelector(".skill");
+	inView(
+		inviewelement9 , () => {
+			inviewelement9.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+
+		const inviewelement10 = document.querySelector(".skill1");
+	inView(
+		inviewelement10 , () => {
+			inviewelement10.classList.add("animate__animated","animate__fadeInUp", "animate__delay-2s")
+		})
+
+			const inviewelement11 = document.querySelector(".skill2");
+	inView(
+		inviewelement11 , () => {
+			inviewelement11.classList.add("animate__animated","animate__fadeInUp", "animate__delay-3s")
+		})
+
+	
+		
+		
+		
+</script>
