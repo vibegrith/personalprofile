@@ -31,7 +31,7 @@ const {src} = await getImage({src: Vibe})
 ---
 <MainLayout title="Titel">
 
-	<article class="ml-10 mr-10 md:ml-14 md:mr-0 section1" style=`background-image: url(${src})`>
+	<article class=`ml-10 mr-10 md:ml-14 md:mr-0 section1 bg-none lg:bg-[url(${src})]` `>
   <div class="md:mb-40"> 
     <h2 class="lg:text-9xl relative z-20 font-bold">About</h2>
     <Image class="mt-[-2rem] absolute w-2/5 h-auto" src={Underline} alt="Brush underline"></Image>
@@ -354,11 +354,7 @@ I am eager to further develop my skills in this area and work on tasks that invo
     background-repeat: no-repeat;
 }
 
-@media (max-width: 768px) { /* Skjuler baggrunden på mobile enheder */
-    .section1 {
-        background-image: none; /* Skjuler baggrunden */
-    }
-}
+
 
 </style>
 
